@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const open = require('open');
 const compression = require('compression');
-const port = 443
+const port = process.env.PORT || 80
 const app = express();
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
